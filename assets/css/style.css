@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+/* font-family: 'Quicksand', sans-serif;     */
+body{
+    font-family: 'Open Sans', sans-serif;    
+    background-color: #06283D;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+}
+a{    
+    color: #fff;
+}
+header {
+    display: inline;
+ }
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0px 15px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    background-color: #256D85;
+}
+.navbar a{
+    text-decoration: none;
+    color: inherit;    
+}
+.logo{
+    margin-right: 50px;
+}
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.img-container{
+    width: 100%;
+    max-height: 300px;
+    background-color: white;
+    text-align: center;    
+}
+.featured-image {
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;            
+}
+.featured-image2 {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;            
+}
+.profile img {
+    width: 100%;
+}
+.profile {
+    text-align: center;
+}
+.profile p{
+    font-size: 14px;
+}
+footer{
+    color: #fff;
+    text-align: center;
+    background-color: #256D85;
+    padding: 20px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(255, 253, 253, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.card:hover{ 
+    box-shadow: 1px 8px 20px grey;
+   -webkit-transition:  box-shadow .6s ease-in;
+}
+.container{
+    margin: 8px;
+}
+nav a img{
+    width: 100px;
+}
+.jumbotron {
+    padding: 60px;
+    /* background-color: #47B5FF; */
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-image: url("../image/JavaScriptBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;    
+}
+* {
+    box-sizing: border-box;
+}
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+main {
+    padding: 20px;
+    overflow: auto;
+}
+#content {
+    float: left;
+    width: 75%;
+}
+@media screen and (max-width: 1000px) {
+    #content,
+    aside {
+      width: 100%;
+      padding: 0;
+    }
+  }
+/* @media screen and
+(max-width: 600px){    
+} */
