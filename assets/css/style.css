@@ -14,57 +14,6 @@ a{
 header {
     display: inline;
  }
-.navbar{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 0px 15px;
-    color: #fff;
-    position: sticky;
-    top: 0;
-    background-color: #256D85;
-}
-.navbar a{
-    text-decoration: none;
-    color: inherit;    
-}
-.logo{
-    margin-right: 50px;
-}
-.list{
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-.img-container{
-    width: 100%;
-    max-height: 300px;
-    background-color: white;
-    text-align: center;    
-}
-.featured-image {
-    height: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    object-position: center;            
-}
-.featured-image2 {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    object-position: center;            
-}
-.profile img {
-    width: 100%;
-}
-.profile {
-    text-align: center;
-}
-.profile p{
-    font-size: 14px;
-}
 footer{
     color: #fff;
     text-align: center;
@@ -81,12 +30,6 @@ footer{
     box-shadow: 1px 8px 20px grey;
    -webkit-transition:  box-shadow .6s ease-in;
 }
-.container{
-    margin: 8px;
-}
-nav a img{
-    width: 100px;
-}
 .jumbotron {
     padding: 60px;
     /* background-color: #47B5FF; */
@@ -100,18 +43,220 @@ nav a img{
 * {
     box-sizing: border-box;
 }
-aside {
-    float: right;
-    width: 25%;
-    padding-left: 20px;
-}
 main {
     padding: 20px;
     overflow: auto;
 }
-#content {
-    float: left;
-    width: 75%;
+input {
+    margin-top: 5px;
+    border: none;
+    outline: 1px solid gray;
+    transition: ease-in 0.1s;
+}
+.add_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px; 
+    background: rgba(20, 18, 18, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+ 
+.add_section > h2 {
+    text-align: center;
+    color: var(--darkblue);
+}
+ 
+.add_section > form > .input {
+    margin: 8px 0;
+}
+ 
+.btn-add {
+    color: black;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+ 
+.add_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+ 
+.add_section > form > .input > label {
+    color: var(--darkblue);
+    font-weight: 700;
+}
+ 
+.add_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+ 
+.add_section > form > .input_inline > label {
+    color: var(--darkblue);
+    font-weight: bold;
+    margin-right: 10px;
+}
+.add_section > form > .input_inline > #inputBookIsComplete {
+    outline-style: none;
+}
+
+.edit_section {
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 0;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.425);
+    backdrop-filter: blur(5px);
+}
+ 
+.edit_section > form {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgb(192, 192, 192);
+}
+
+.search_section {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background: rgba(20, 18, 18, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+ 
+.search_section > h2 {
+    color: var(--darkblue);
+}
+ 
+.search_section > form {
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.search_section > form > label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+ 
+.search_section > form > input {
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+ 
+.btn-search{
+    color: black;
+    font-weight: 600;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    width: 20%;
+}
+
+.book_list{
+    box-shadow: 0 4px 8px 0 rgba(255, 253, 253, 0.2);
+    border-radius: 5px;
+    background-color: #5cb1d8;
+    padding: 20px;
+    margin-top: 20px;
+}
+.book_list:hover{
+    box-shadow: 1px 8px 20px white;
+   -webkit-transition:  box-shadow .6s ease-in;
+}
+.uncompleted-read {
+	background-color: transparent;
+	border: 3px solid hsl(64, 100%, 54%);
+	color: white;	
+	height: 30px;	
+}
+
+.uncompleted-read:hover {
+	background-color: #d5f2ff;
+	border: 3px solid #347b9c;
+	color: #5cb1d8;
+}
+
+.completed-read {
+	background-color: transparent;
+	border: 3px solid hsl(113, 80%, 57%);
+	color: white;	
+	height: 30px;	
+}
+
+.completed-read:hover {
+	background-color: #d5f2ff;
+	border: 3px solid #0ff707;
+	color: #5cb1d8;
+}
+.edit_section {
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 0;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.425);
+    backdrop-filter: blur(5px);
+}
+.book-title{
+    font-family: 'Quicksand', sans-serif;
+}
+.book-content{
+    box-shadow: 0 4px 8px 0 rgba(255, 253, 253, 0.2);
+    border-radius: 5px;
+    background-color: grey;
+    padding: 20px;
+    margin-top: 20px;
+}
+.book_shelf_section{
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background: rgba(20, 18, 18, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.book_shelf{
+    width: 100%;
+    background-color: #628E90;
 }
 @media screen and (max-width: 1000px) {
     #content,
